@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+ ocr_app:
+  build:
+   context: .
+   dockerfile: ./Dockerfile
+  container_name: ocr_app
+  volumes:
+   - .:/home
+   - /home/node_modules
+  ports:
+   - "8082:80"
+
